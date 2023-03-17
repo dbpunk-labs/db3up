@@ -12,7 +12,7 @@ if [ -f ~/.zshrc ]; then
     echo "PATH=~/.db3/bin:\$PATH" >> ~/.zshrc
     echo "please run source ~/.zshrc manually to update the enviroment"
 elif [ -f ~/.bashrc ]; then
-    echo "PATH=~/.db3/bin:\$PATH" >> ~/.zshrc 
+    echo "PATH=~/.db3/bin:\$PATH" >> ~/.bashrc 
     echo "please run source ~/.bashrc manually to update the enviroment"
 else
     echo "please add PATH=~/.db3/bin:\$PATH to your enviroment manually"
