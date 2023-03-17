@@ -9,14 +9,24 @@ chmod +x ~/.db3/bin/db3up
 if [ -f ~/.zshrc ]; then
     read -p "Add ~/.db3/bin to your PATH(y/n)? " yn
     case $yn in
-        [Yy]* ) echo "PATH=~/.db3/bin:\$PATH" >> ~/.zshrc && echo "please run source ~/.zshrc manually";;
-        [Nn]* ) echo "please add PATH=~/.db3/bin:\$PATH to ~/.zshrc manually";;
+        [Yy]* )
+            echo "PATH=~/.db3/bin:\$PATH" >> ~/.zshrc
+            echo "please run source ~/.zshrc manually to update the enviroment"
+            ;;
+        [Nn]* )
+            echo "please add PATH=~/.db3/bin:\$PATH to ~/.zshrc manually"
+            ;;
     esac
 elif [ -f ~/.bashrc ]; then
     read -p "Add ~/.db3/bin to your PATH(y/n)? " yn
     case $yn in
-        [Yy]* ) echo "PATH=~/.db3/bin:\$PATH" >> ~/.zshrc && echo "please run source ~/.bashrc manually";;
-        [Nn]* ) echo "please add PATH=~/.db3/bin:\$PATH to ~/.bashrc manually";;
+        [Yy]* )
+            echo "PATH=~/.db3/bin:\$PATH" >> ~/.zshrc 
+            echo "please run source ~/.bashrc manually to update the enviroment"
+            ;;
+        [Nn]* )
+            echo "please add PATH=~/.db3/bin:\$PATH to ~/.bashrc manually"
+            ;;
     esac
 else
     echo "please add PATH=~/.db3/bin:\$PATH to your enviroment manually"
